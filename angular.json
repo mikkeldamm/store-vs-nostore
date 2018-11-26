@@ -135,5 +135,13 @@
       }
     }
   },
-  "defaultProject": "no-store-example"
+  "defaultProject": "no-store-example",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  },
+  "schematics": {
+    "@ngrx/schematics:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,0 +1,8 @@
+<div *ngFor="let item of (items | async);">
+    Beløb inkl. moms:
+    <input [value]="item.amount" (change)="onAmountChange($event.target.value, item.id)">
+    <span>Moms: {{ item.vat.toFixed(2) }},-</span>
+    (Momsfri: <input [checked]="item.noVat" (change)="onNoVatChange($event.target.checked, item.id)" type="checkbox">)
+</div>
+<p>Total: {{ (totalAmount | async).toFixed(2) }}</p>
+<p>Moms: {{ (totalVat | async).toFixed(2) }}</p>
